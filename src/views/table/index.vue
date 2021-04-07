@@ -35,7 +35,7 @@
       </el-table-column>
       <el-table-column align="center" prop="created_at" label="Display_time" width="200">
         <template slot-scope="scope">
-          <i class="el-icon-time" />
+          <i class="el-icon-time"/>
           <span>{{ scope.row.display_time }}</span>
         </template>
       </el-table-column>
@@ -48,7 +48,7 @@ import { getList } from '@/api/table'
 
 export default {
   filters: {
-    statusFilter(status) {
+    statusFilter (status) {
       const statusMap = {
         published: 'success',
         draft: 'gray',
@@ -57,17 +57,17 @@ export default {
       return statusMap[status]
     }
   },
-  data() {
+  data () {
     return {
       list: null,
       listLoading: true
     }
   },
-  created() {
+  created () {
     this.fetchData()
   },
   methods: {
-    fetchData() {
+    fetchData () {
       this.listLoading = true
       getList().then(response => {
         this.list = response.data.items
