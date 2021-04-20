@@ -173,6 +173,19 @@ export const constantRoutes = [
     ]
   },
 
+  {
+    path: '/grades',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Grades',
+        component: () => import('@/views/grades/index'),
+        meta: { title: '成绩分析', icon: 'form' }
+      }
+    ]
+  },
+
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
