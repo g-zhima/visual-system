@@ -3,11 +3,11 @@ const Mock = require('mockjs')
 const data = Mock.mock({
   'items|30': [{
     id: '@id',
-    title: '@sentence(10, 20)',
-    'status|1': ['published', 'draft', 'deleted'],
-    author: 'name',
-    display_time: '@datetime',
-    pageviews: '@integer(300, 5000)'
+    title: '@cname',
+    'status|1': ['在线', '下线', 'deleted'],
+    'author|1': ['大一', '大二', '大三', '大四'],
+    display_time: '@date',
+    'pageviews|1': ['电子工程系', '机械工程系', '外语系', '自动化系']
   }]
 })
 

@@ -1,10 +1,19 @@
 <template>
-$END$
+  <div>
+    123
+  </div>
 </template>
 
 <script>
+import VChart, { THEME_KEY } from 'vue-echarts'
+
 export default {
-name: "index"
+  components: {
+    VChart
+  },
+  provide: {
+    [THEME_KEY]: 'light'
+  }
 }
 </script>
 
